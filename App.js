@@ -1,21 +1,17 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import { View } from "react-native";
+import { HomeScreen } from "./screens/HomeScreen";
+import { LoginScreen } from "./screens/LoginScreen";
+import { styles } from "./Styles";
 
 export default function App() {
+  const [user, setUser] = useState(null);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app! updated</Text>
+      {!user ? <LoginScreen /> : <HomeScreen />}
       <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
