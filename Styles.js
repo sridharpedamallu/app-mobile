@@ -6,9 +6,11 @@ const screenView = {
   justifyContent: "center",
 };
 
-const primaryColor = "#fc03ba";
+const primaryColor = "#561bb5";
 const secondaryColor = "#5603fc";
 const primaryTextColor = "white";
+
+const controlWidth = "80%";
 
 export const styles = StyleSheet.create({
   container: {
@@ -16,7 +18,7 @@ export const styles = StyleSheet.create({
   },
   homeScreenView: {
     ...screenView,
-    backgroundColor: secondaryColor,
+    backgroundColor: primaryColor,
   },
 
   loginScreenView: {
@@ -27,6 +29,18 @@ export const styles = StyleSheet.create({
   headText: {
     color: primaryTextColor,
     fontSize: 32,
+    marginBottom: 100,
+  },
+
+  welcomeText: {
+    color: primaryTextColor,
+    fontSize: 32,
+    marginBottom: 20,
+  },
+
+  warningText: {
+    color: primaryTextColor,
+    fontSize: 24,
   },
 
   buttonText: {
@@ -39,17 +53,24 @@ export const styles = StyleSheet.create({
     borderColor: primaryTextColor,
     borderWidth: 2,
     borderRadius: 5,
-    width: "80%",
+    width: controlWidth,
     marginVertical: 15,
     color: primaryTextColor,
     fontSize: 24,
     paddingHorizontal: 10,
   },
+
+  errorMessage: {
+    color: "white",
+    fontSize: 16,
+    marginBottom: 100,
+  },
+
   button: {
     alignItems: "center",
     backgroundColor: "white",
     borderColor: primaryColor,
-    width: "80%",
+    width: controlWidth,
     borderWidth: 2,
     borderRadius: 5,
     padding: 10,

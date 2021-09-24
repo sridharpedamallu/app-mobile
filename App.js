@@ -8,9 +8,15 @@ import { styles } from "./Styles";
 export default function App() {
   const [user, setUser] = useState(null);
 
+  const Login = (user) => {
+    setUser(() => {
+      return user;
+    });
+  };
+
   return (
     <View style={styles.container}>
-      {!user ? <LoginScreen /> : <HomeScreen />}
+      {!user ? <LoginScreen Login={Login} /> : <HomeScreen user={user} />}
       <StatusBar style="auto" />
     </View>
   );
